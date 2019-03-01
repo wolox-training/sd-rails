@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: wbooks-api_production
-  username: wbooks-api
-  password: wbooks-api
+  username: <%= ENV.fetch('DB_USERNAME') %>
+  password: <%= ENV.fetch('DB_PASSWORD') %>
