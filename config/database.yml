@@ -20,6 +20,8 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV.fetch('DB_USERNAME', 'wbooks-api') %>
+  password: <%= ENV.fetch('DB_PASSWORD', 'wbooks-api') %>
 
 development:
   <<: *default
@@ -81,5 +83,3 @@ test:
 production:
   <<: *default
   database: wbooks-api_production
-  username: <%= ENV.fetch('DB_USERNAME') %>
-  password: <%= ENV.fetch('DB_PASSWORD') %>
