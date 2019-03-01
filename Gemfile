@@ -28,6 +28,8 @@ gem 'puma', '~> 3.7'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Ruby static code analyzer and code formatter
+  gem 'rubocop', '~> 0.65.0', require: false
 end
 
 group :development do
