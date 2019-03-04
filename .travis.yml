@@ -18,7 +18,7 @@ before_script:
   - bundle exec rake db:migrate
 
 before_install:
-  - rvm @default,@global do gem uninstall bundler -v 2.0.1 -x
+  - rvm @default,@global do gem uninstall bundler -x
   - gem install bundle --version '~> 2.0.1'
   - bundle --version
   - "echo '--colour' > ~/.rspec"
