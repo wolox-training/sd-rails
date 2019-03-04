@@ -19,7 +19,7 @@ before_script:
 
 before_install:
   - rvm @default,@global do gem uninstall bundler -x
-  - gem install bundle --version '~> 2.0.1'
+  - gem install bundler -v 2.0.1
   - bundle --version
   - "echo '--colour' > ~/.rspec"
   - "echo 'gem: --no-document' > ~/.gemrc"
