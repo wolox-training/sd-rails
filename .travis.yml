@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+  - 2.4.0
+
+script:
+  - bundle exec rspec spec -fd
+  - bundle exec rubocop app spec -R --format simple
+
+cache:
+  bundler: true
