@@ -28,6 +28,12 @@ gem 'puma', '~> 3.7'
 # Multi-client and secure token-based authentication
 gem 'devise_token_auth'
 
+# Back end json format
+gem 'active_model_serializers'
+
+# Pagination
+gem 'wor-paginate'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
