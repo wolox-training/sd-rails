@@ -42,5 +42,18 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :test do
+  # Ensures a clean state during tests
+  gem 'database_cleaner'
+  # Fixtures replacement
+  gem 'factory_bot'
+  # Fake data generator
+  gem 'faker'
+  # Testing suite
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'rails-controller-testing'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
