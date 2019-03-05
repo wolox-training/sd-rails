@@ -1,9 +1,8 @@
 require 'rails_helper'
 require 'factories'
 
-
 RSpec.describe Book, type: :model do
-  subject (:book) { build(:book) }
+  subject(:book) { build(:book) }
   it { is_expected.to be_valid }
   it { is_expected.to validate_presence_of(:genre) }
   it { is_expected.to validate_presence_of(:author) }
