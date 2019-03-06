@@ -26,7 +26,7 @@ gem 'puma', '~> 3.7'
 # gem 'rack-cors'
 
 # Multi-client and secure token-based authentication
-gem 'devise_token_auth'
+gem 'devise_token_auth', '~> 1.0.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -44,15 +44,15 @@ end
 
 group :test do
   # Ensures a clean state during tests
-  gem 'database_cleaner'
+  gem 'database_cleaner', '~> 1.7.0'
   # Fixtures replacement
-  gem 'factory_bot'
+  gem 'factory_bot', '~> 5.0.2'
   # Fake data generator
-  gem 'faker'
+  gem 'faker', '~> 1.9.3'
   # Testing suite
-  gem 'rspec-rails'
-  gem 'shoulda-matchers'
-  gem 'rails-controller-testing'
+  gem 'rspec-rails', '~> 3.8.2'
+  gem 'shoulda-matchers', '~> 4.0.1'
+  gem 'rails-controller-testing', '~> 1.0.4'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
