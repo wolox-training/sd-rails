@@ -16,21 +16,21 @@ ActiveRecord::Schema.define(version: 20190305144614) do
   enable_extension "plpgsql"
 
   create_table "books", force: :cascade do |t|
-    t.string "genre"
-    t.string "author"
-    t.string "image"
-    t.string "title"
-    t.string "editor"
-    t.string "year"
+    t.string "genre", null: false
+    t.string "author", null: false
+    t.string "image", null: false
+    t.string "title", null: false
+    t.string "editor", null: false
+    t.string "year", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "rents", force: :cascade do |t|
-    t.date "init_date"
-    t.date "return_date"
-    t.bigint "user_id"
-    t.bigint "book_id"
+    t.date "init_date", null: false
+    t.date "return_date", null: false
+    t.bigint "user_id", null: false
+    t.bigint "book_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["book_id"], name: "index_rents_on_book_id"

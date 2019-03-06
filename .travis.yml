@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - 2.4.0
+  - 2.5.3
 
 env:
   global:
@@ -18,16 +18,12 @@ before_script:
   - bundle exec rake db:migrate
 
 before_install:
-  - rvm @default,@global do gem uninstall bundler -x
-  - gem install bundler -v 2.0.1
-  - bundle --version
   - "echo '--colour' > ~/.rspec"
   - "echo 'gem: --no-document' > ~/.gemrc"
   # Solves rainbow issue: https://github.com/sickill/rainbow/issues/48
   - gem update --system
 
 script:
-  # TODO allow rspec when installed and configured
   - bundle exec rspec spec -fd
   - bundle exec rubocop app spec -R --format simple
 
