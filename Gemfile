@@ -26,7 +26,7 @@ gem 'puma', '~> 3.7'
 # gem 'rack-cors'
 
 # Multi-client and secure token-based authentication
-gem 'devise_token_auth'
+gem 'devise_token_auth', '~> 1.0.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
