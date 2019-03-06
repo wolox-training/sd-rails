@@ -1,10 +1,10 @@
 FactoryBot.define do
   factory :book do
-    genre { 'Horror' }
-    author { 'John Doe' }
-    image { 'Some image' }
-    title { 'Horror book' }
-    editor { 'Some editor' }
-    year { '2019' }
+    genre { Faker::Book.genre }
+    author { Faker::Name.name }
+    image { Faker::Book.title }
+    title { Faker::Book.title }
+    editor { Faker::Book.publisher }
+    year { Faker::Date.between(100.years.ago, Time.zone.today).year }
   end
 end
