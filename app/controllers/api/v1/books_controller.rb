@@ -4,11 +4,11 @@ module Api
       before_action :authenticate_user!
 
       def index
-        render_paginated Book.all, each_serializer: BooksListSerializer
+        render_paginated Book.all
       end
 
       def show
-        render json: Book.find(params[:id]), each_serializer: BookSerializer
+        render json: Book.find(params[:id])
       end
     end
   end
