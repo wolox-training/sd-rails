@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'factories/book_factory'
 
 RSpec.describe Book, type: :model do
   subject(:book) { create(:book) }

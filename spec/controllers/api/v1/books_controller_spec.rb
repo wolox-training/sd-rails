@@ -1,7 +1,4 @@
 require 'rails_helper'
-require 'factories/book_factory'
-require 'factories/user_factory'
-require 'shared_contexts/authenticated_user.rb'
 
 RSpec.describe Api::V1::BooksController, type: :controller do
   include_context 'Authenticated User'
@@ -16,7 +13,7 @@ RSpec.describe Api::V1::BooksController, type: :controller do
 
       it 'responses with the books list json' do
         expected = ActiveModel::Serializer::CollectionSerializer.new(
-          books, serializer: Api::V1::BooksListSerializer
+          books, serializer: Api::V1::BookSerializer
         ).to_json
 
         expect(response.body) =~ expected

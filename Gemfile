@@ -29,10 +29,10 @@ gem 'puma', '~> 3.7'
 gem 'devise_token_auth', '~> 1.0.0'
 
 # Back end json format
-gem 'active_model_serializers'
+gem 'active_model_serializers', '~> 0.10.9'
 
 # Pagination
-gem 'wor-paginate'
+gem 'wor-paginate', '~> 0.1.4'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
