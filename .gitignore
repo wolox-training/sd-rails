@@ -12,7 +12,9 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-
+/app/.DS_Store
+/db/.DS_Store
+.DS_Store
 .byebug_history
 
 # Ignore test folder (spec will be used instead)

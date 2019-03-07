@@ -5,3 +5,19 @@ User.create(
   first_name: 'Test',
   last_name: 'TestLastName'
 )
+
+Book.create(
+  genre: 'Horror',
+  author: 'some author',
+  image: 'some image',
+  title: 'some title',
+  editor: 'some editor',
+  year: '2019'
+)
+
+Rent.create(
+  user: User.last, 
+  book: Book.last, 
+  init_date: Time.now, 
+  return_date: Time.now
+)
