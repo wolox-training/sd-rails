@@ -1,0 +1,16 @@
+<h1>New rent registered for: <%= @user.email %></h1>
+<hr>
+<h2>Book:</h2>
+<ul>
+  <li>Title: <%= @book.title %></li>
+  <li>Genre: <%= @book.genre %></li>
+  <li>Author: <%= @book.author %></li>
+  <li>Editor: <%= @book.editor %></li>
+  <li>Year: <%= @book.year %></li>
+</ul>
+<hr>
+<h2>Period:</h2>
+<ul>
+  <li>Initial Date: <%= @rent.init_date %></li>
+  <li>Return Date: <%= @rent.return_date %></li>
+</ul>

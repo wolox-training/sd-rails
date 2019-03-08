@@ -5,11 +5,12 @@ module Api
 
       def create
         rent = Rent.create(rent_params)
+        Api::V1::RentsMailer.new_rent(rent).deliver_later
         render json: rent
       end
 
       def index
-        render json: Rent.all, each_serializer: RentSerializer
+        render_paginated json: Rent.all, each_serializer: RentSerializer
       end
 
       private
