@@ -4,19 +4,22 @@ module Api
       before_action :authenticate_user!
 
       def create
-        rent = Rent.create(rent_params)
-        Api::V1::RentsMailer.new_rent(rent).deliver_later
-        render json: rent
+        rent = Rent.new(rent_params)
+        if rent.save!
+          render json: rent, status: :created
+        else
+          render json: { errors: rent.erros }, status: :precondition_failed
+        end
       end
 
       def index
-        render_paginated json: Rent.all, each_serializer: RentSerializer
+        render_paginated Rent.all, each_serializer: RentSerializer
       end
 
       private
 
       def rent_params
-        params.permit(:init_date, :return_date, :user_id, :book_id)
+        params.require(:rent).permit(:init_date, :return_date, :user_id, :book_id)
       end
     end
   end

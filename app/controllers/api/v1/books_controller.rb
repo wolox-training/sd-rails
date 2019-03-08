@@ -8,7 +8,13 @@ module Api
       end
 
       def show
-        render json: Book.find(params[:id])
+        render json: book
+      end
+
+      private
+
+      def book
+        @book ||= Book.find(params.require(:id))
       end
     end
   end
