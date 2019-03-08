@@ -19,3 +19,4 @@
 .env
 # Ignore test folder (spec will be used instead)
 /test
+dump.rdb
