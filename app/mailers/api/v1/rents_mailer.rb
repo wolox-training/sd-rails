@@ -6,7 +6,7 @@ module Api
         @user = @rent.user
         @book = @rent.book
         mail to: @user.email
-        mail subject: 'New rent information'
+        mail subject: I18n.t('new_rent_subject')
       end
     end
   end
