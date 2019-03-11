@@ -12,7 +12,7 @@ User.create(
   password_confirmation: '123123123',
   first_name: 'Test',
   last_name: 'TestLastName',
-  locale: 'es'
+  locale: 1
 )
 
 Book.create(

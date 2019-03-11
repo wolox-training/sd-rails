@@ -29,6 +29,6 @@ class ApiController < ApplicationController
   def bad_request
     render json: { description: 'BAD_REQUEST',
                    message: 'a required parameter is missing' },
-           status: :forbidden
+           status: :bad_request
   end
 end
