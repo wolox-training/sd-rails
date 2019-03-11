@@ -7,6 +7,7 @@ class ApiController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :not_found
   rescue_from ActionController::ParameterMissing, with: :bad_request
   rescue_from Pundit::NotAuthorizedError, with: :unauthorized_request
+  before_action :set_locale
 
   private
 
@@ -35,6 +36,6 @@ class ApiController < ApplicationController
   def unauthorized_request
     render json: { description: 'UNAUTHORIZED_REQUEST',
                    message: 'you do not have access to the requested action' },
-           status: :forbidden
+           status: :unauthorized
   end
 end
