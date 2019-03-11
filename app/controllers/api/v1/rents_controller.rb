@@ -14,7 +14,7 @@ module Api
       end
 
       def index
-        render_paginated Rent.all, each_serializer: RentSerializer
+        render_paginated Rent.where(user: current_user), each_serializer: RentSerializer
       end
 
       private
