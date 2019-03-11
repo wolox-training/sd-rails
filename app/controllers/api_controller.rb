@@ -7,6 +7,7 @@ class ApiController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :not_found
   rescue_from ActionController::ParameterMissing, with: :bad_request
   rescue_from Pundit::NotAuthorizedError, with: :unauthorized_request
+  before_action :set_locale
 
   private
 
