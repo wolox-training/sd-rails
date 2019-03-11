@@ -6,7 +6,7 @@ class ApiController < ApplicationController
   rescue_from ActiveRecord::RecordInvalid, with: :validation_errors
   rescue_from ActiveRecord::RecordNotFound, with: :not_found
   rescue_from ActionController::ParameterMissing, with: :bad_request
-  before_action :set_locale
+  rescue_from Pundit::NotAuthorizedError, with: :unauthorized_request
 
   private
 
@@ -30,5 +30,11 @@ class ApiController < ApplicationController
     render json: { description: 'BAD_REQUEST',
                    message: 'a required parameter is missing' },
            status: :bad_request
+  end
+
+  def unauthorized_request
+    render json: { description: 'UNAUTHORIZED_REQUEST',
+                   message: 'you do not have access to the requested action' },
+           status: :forbidden
   end
 end

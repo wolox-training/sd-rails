@@ -5,7 +5,9 @@ module Api
 
       def create
         rent = Rent.new(rent_params)
+        authorize rent
         if rent.save!
+          set_locale
           Api::V1::RentsMailer.new_rent(rent.id).deliver_later
           render json: rent, status: :created
         else
