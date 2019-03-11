@@ -2,9 +2,11 @@ module Api
   module V1
     class RentsController < ApiController
       before_action :authenticate_user!
+      before_action :set_locale, only: [:create]
 
       def create
         rent = Rent.new(rent_params)
+        authorize rent
         if rent.save!
           Api::V1::RentsMailer.new_rent(rent.id).deliver_later
           render json: rent, status: :created
