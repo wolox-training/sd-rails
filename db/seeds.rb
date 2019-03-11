@@ -6,6 +6,15 @@ User.create(
   last_name: 'TestLastName'
 )
 
+User.create(
+  email: 'test@wolox.com.es',
+  password: '123123123',
+  password_confirmation: '123123123',
+  first_name: 'Test',
+  last_name: 'TestLastName',
+  locale: 'es'
+)
+
 Book.create(
   genre: 'Horror',
   author: 'some author',

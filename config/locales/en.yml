@@ -30,4 +30,14 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  title: 'Title'
+  genre: 'Genre'
+  book: 'Book'
+  author: 'Author'
+  editor: 'Editor'
+  year: 'Year'
+  period: 'Period'
+  init_date: 'Initial date'
+  return_date: 'Return date'
+  new_rent: 'New rent registered for'
+  new_rent_subject: 'New rent information'

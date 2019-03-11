@@ -5,8 +5,13 @@ class ApiController < ApplicationController
   rescue_from ActiveRecord::RecordInvalid, with: :validation_errors
   rescue_from ActiveRecord::RecordNotFound, with: :not_found
   rescue_from ActionController::ParameterMissing, with: :bad_request
+  before_action :set_locale
 
   private
+
+  def set_locale
+    I18n.locale = current_user.locale
+  end
 
   def not_found
     render json: { description: 'NOT_FOUND',

@@ -1,16 +1,16 @@
-<h1>New rent registered for: <%= @user.email %></h1>
+<h1><%= t('new_rent') + ": #{@user.email}" %></h1>
 <hr>
-<h2>Book:</h2>
+<h2><%= t('book') %></h2>
 <ul>
-  <li>Title: <%= @book.title %></li>
-  <li>Genre: <%= @book.genre %></li>
-  <li>Author: <%= @book.author %></li>
-  <li>Editor: <%= @book.editor %></li>
-  <li>Year: <%= @book.year %></li>
+  <li><%= t('title') + ": #{@book.title}" %></li>
+  <li><%= t('genre') + ": #{@book.genre}" %></li>
+  <li><%= t('author') + ": #{@book.author}" %></li>
+  <li><%= t('editor') + ": #{@book.editor}" %></li>
+  <li><%= t('year') + ": #{@book.year}" %></li>
 </ul>
 <hr>
-<h2>Period:</h2>
+<h2><%= t('period') %></h2>
 <ul>
-  <li>Initial Date: <%= @rent.init_date %></li>
-  <li>Return Date: <%= @rent.return_date %></li>
+  <li><%= t('init_date') + ": #{@rent.init_date}" %></li>
+  <li><%= t('return_date') + ": #{@rent.return_date}" %></li>
 </ul>
