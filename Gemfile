@@ -35,6 +35,8 @@ gem 'active_model_serializers', '~> 0.10.9'
 gem 'wor-paginate', '~> 0.1.4'
 # BG processing
 gem 'sidekiq', '~> 5.2.5'
+# Authorization policies
+gem 'pundit', '~> 2.0.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,6 +1,7 @@
 class ApiController < ApplicationController
   include DeviseTokenAuth::Concerns::SetUserByToken
   include Wor::Paginate
+  include Pundit
 
   rescue_from ActiveRecord::RecordInvalid, with: :validation_errors
   rescue_from ActiveRecord::RecordNotFound, with: :not_found
