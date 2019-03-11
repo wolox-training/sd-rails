@@ -1,0 +1,12 @@
+es:
+  title: 'Título'
+  genre: 'Género'
+  book: 'Libro'
+  author: 'Autor'
+  editor: 'Editor'
+  year: 'Año'
+  period: 'Periodo'
+  init_date: 'Fecha inicial'
+  return_date: 'Fecha de regreso'
+  new_rent: 'Nueva renta registrada para'
+  new_rent_subject: 'Información de nueva renta'
