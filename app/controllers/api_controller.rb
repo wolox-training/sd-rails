@@ -35,6 +35,6 @@ class ApiController < ApplicationController
   def unauthorized_request
     render json: { description: 'UNAUTHORIZED_REQUEST',
                    message: 'you do not have access to the requested action' },
-           status: :forbidden
+           status: :unauthorized
   end
 end
