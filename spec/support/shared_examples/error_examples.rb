@@ -1,9 +1,6 @@
-RSpec.shared_examples 'error examples' do
-  before do
-    http_request
-  end
-
+shared_examples 'error examples' do
   it 'returns error messages' do
+    http_request
     expect(response.body['message']).to be_present
   end
 
