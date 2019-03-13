@@ -1,0 +1,2 @@
+class ExternalRecordNotFoundException < StandardError
+end
