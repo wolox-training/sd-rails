@@ -22,6 +22,7 @@ describe Api::V1::BookSuggestionsController, type: :controller do
       include_examples 'error examples'
 
       it 'responds with unprocessable_entity status' do
+        http_request
         expect(response).to have_http_status(:unprocessable_entity)
       end
     end
@@ -32,6 +33,7 @@ describe Api::V1::BookSuggestionsController, type: :controller do
       include_examples 'error examples'
 
       it 'responds with bad_request status' do
+        http_request
         expect(response).to have_http_status(:bad_request)
       end
     end
