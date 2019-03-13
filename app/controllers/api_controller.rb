@@ -1,3 +1,5 @@
+require 'errors/external_record_not_found_exception'
+
 class ApiController < ApplicationController
   include DeviseTokenAuth::Concerns::SetUserByToken
   include Wor::Paginate
@@ -7,6 +9,7 @@ class ApiController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :not_found
   rescue_from ActionController::ParameterMissing, with: :bad_request
   rescue_from Pundit::NotAuthorizedError, with: :unauthorized_request
+  rescue_from ExternalRecordNotFoundException, with: :external_record_not_found
 
   private
 
@@ -36,5 +39,11 @@ class ApiController < ApplicationController
     render json: { description: 'UNAUTHORIZED_REQUEST',
                    message: 'you do not have access to the requested action' },
            status: :unauthorized
+  end
+
+  def external_record_not_found
+    render json: { description: 'EXTERNAL_RECORD_NOT_FOUND',
+                   message: 'record was not found in the external service' },
+           status: :not_found
   end
 end

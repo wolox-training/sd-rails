@@ -11,11 +11,6 @@ module Api
         render json: book
       end
 
-      def search
-        ols = OpenLibraryService.new
-        render json: ols.book(params[:isbn])
-      end
-
       private
 
       def book
