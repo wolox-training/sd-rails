@@ -23,7 +23,7 @@ class ApiController < ApplicationController
   def validation_errors
     render json: { description: 'VALIDATION_ERROR',
                    message: 'request params did not match validations' },
-           status: :internal_server_error
+           status: :unprocessable_entity
   end
 
   def bad_request

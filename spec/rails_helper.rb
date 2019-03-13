@@ -9,6 +9,8 @@ require 'rspec/rails'
 
 # Require all shared contexts
 Dir[Rails.root.join('spec', 'support', 'shared_contexts', '*.rb')].each { |f| require f }
+# Require all shared examples
+Dir[Rails.root.join('spec', 'support', 'shared_examples', '*.rb')].each { |f| require f }
 # Require all factories
 Dir[Rails.root.join('spec', 'factories', '*.rb')].each { |f| require f }
 # Requires supporting ruby files with custom matchers and macros, etc, in
