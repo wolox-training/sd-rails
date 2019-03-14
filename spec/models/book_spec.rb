@@ -1,6 +1,4 @@
-require 'rails_helper'
-
-RSpec.describe Book, type: :model do
+describe Book, type: :model do
   subject(:book) { create(:book) }
   it { is_expected.to be_valid }
   it { is_expected.to validate_presence_of(:genre) }
