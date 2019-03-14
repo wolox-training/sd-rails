@@ -1,5 +1,3 @@
-require 'errors/external_record_not_found_exception'
-
 class OpenLibraryService
   include HTTParty
   base_uri 'https://openlibrary.org'
@@ -18,7 +16,7 @@ class OpenLibraryService
 
   def format_ol_response(isbn, response)
     response = JSON.parse(response.body)["ISBN:#{isbn}"]
-    raise ExternalRecordNotFoundException, 'external record not found' if response.nil?
+    raise Errors::ExternalRecordNotFoundException, 'external record not found' if response.nil?
 
     found_record(isbn, response)
   end
