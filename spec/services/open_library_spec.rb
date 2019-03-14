@@ -3,7 +3,7 @@ describe OpenLibraryService do
     context 'When open library request is successfull' do
       it 'returns the book info' do
         open_library_success_stub
-        fixture = get_fixture('open_library_response_success')
+        fixture = load_fictures_file('open_library_response_success')
         response = OpenLibraryService.new('0385472579').book
         expect(response).equal? fixture
       end
@@ -16,11 +16,5 @@ describe OpenLibraryService do
           .to raise_error(Errors::ExternalRecordNotFoundException)
       end
     end
-  end
-
-  private
-
-  def get_fixture(file_name)
-    File.read(Rails.root.join('spec', 'support', 'fixtures', "#{file_name}.json"))
   end
 end
