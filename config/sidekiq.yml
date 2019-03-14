@@ -4,5 +4,5 @@
 
 :schedule:
   return_notification:
-    every: 1m   # Runs once per minute
+    cron: '0 9 * * * *'
     class: ReturnDateNotification
