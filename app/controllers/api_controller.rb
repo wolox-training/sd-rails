@@ -1,5 +1,3 @@
-require 'errors/external_record_not_found_exception'
-
 class ApiController < ApplicationController
   include DeviseTokenAuth::Concerns::SetUserByToken
   include Wor::Paginate
@@ -9,7 +7,7 @@ class ApiController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :not_found
   rescue_from ActionController::ParameterMissing, with: :bad_request
   rescue_from Pundit::NotAuthorizedError, with: :unauthorized_request
-  rescue_from ExternalRecordNotFoundException, with: :external_record_not_found
+  rescue_from Errors::ExternalRecordNotFoundException, with: :external_record_not_found
 
   private
 

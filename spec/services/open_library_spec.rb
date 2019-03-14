@@ -13,7 +13,7 @@ describe OpenLibraryService do
       it 'raises error when book not found' do
         open_library_error_stub
         expect { OpenLibraryService.new('xxx').book }
-          .to raise_error(ExternalRecordNotFoundException)
+          .to raise_error(Errors::ExternalRecordNotFoundException)
       end
     end
   end

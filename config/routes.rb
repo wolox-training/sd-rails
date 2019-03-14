@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :books, only: [:index, :show]
-      get 'open_library_requests/search'
+      resources :open_library_requests do
+        collection do
+          get :search 
+        end
+      end
       resources :rents, only: [:index, :create]
       resources :book_suggestions, only: [:create]
     end
