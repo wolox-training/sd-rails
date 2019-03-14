@@ -10,3 +10,6 @@ es:
   return_date: 'Fecha de regreso'
   new_rent: 'Nueva renta registrada para'
   new_rent_subject: 'Información de nueva renta'
+  expired_rent_subject: 'Información de renta vencida'
+  expired_rent_message: 'La renta para el siguiente libro ha vencido: '
+
