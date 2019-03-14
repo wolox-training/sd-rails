@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe Book, type: :model do
   subject(:book) { create(:book) }
   it { is_expected.to be_valid }
