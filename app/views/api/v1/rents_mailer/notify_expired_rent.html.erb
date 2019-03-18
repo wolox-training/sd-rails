@@ -1,0 +1,17 @@
+<h1><%= t('expired_rent_subject') + ": #{@user.email}" %></h1>
+<p><b><%= t('expired_rent_message') %></b></p>
+<hr>
+<h2><%= t('book') %></h2>
+<ul>
+  <li><%= t('title') + ": #{@book.title}" %></li>
+  <li><%= t('genre') + ": #{@book.genre}" %></li>
+  <li><%= t('author') + ": #{@book.author}" %></li>
+  <li><%= t('editor') + ": #{@book.editor}" %></li>
+  <li><%= t('year') + ": #{@book.year}" %></li>
+</ul>
+<hr>
+<h2><%= t('period') %></h2>
+<ul>
+  <li><%= t('init_date') + ": #{@rent.init_date}" %></li>
+  <li><%= t('return_date') + ": #{@rent.return_date}" %></li>
+</ul>

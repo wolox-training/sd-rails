@@ -41,3 +41,6 @@ en:
   return_date: 'Return date'
   new_rent: 'New rent registered for'
   new_rent_subject: 'New rent information'
+  expired_rent_subject: 'Expired rent information'
+  expired_rent_message: 'Your rent for the following book as expired: '
+
