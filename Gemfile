@@ -48,6 +48,8 @@ group :development, :test do
   gem 'rubocop', '~> 0.65.0', require: false
   # Env variables loader
   gem 'dotenv-rails', '~> 2.7.1'
+  # Fake data generator
+  gem 'faker', '~> 1.9.3'
 end
 
 group :development do
@@ -62,8 +64,6 @@ group :test do
   gem 'database_cleaner', '~> 1.7.0'
   # Fixtures replacement
   gem 'factory_bot', '~> 5.0.2'
-  # Fake data generator
-  gem 'faker', '~> 1.9.3'
   # Testing suite
   gem 'rspec-rails', '~> 3.8.2'
   gem 'shoulda-matchers', '~> 4.0.1'

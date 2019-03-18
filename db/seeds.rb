@@ -15,18 +15,21 @@ User.create(
   locale: 1
 )
 
-Book.create(
-  genre: 'Horror',
-  author: 'some author',
-  image: 'some image',
-  title: 'some title',
-  editor: 'some editor',
-  year: '2019'
-)
-
 Rent.create(
   user: User.last, 
   book: Book.last, 
   init_date: Time.now, 
   return_date: Time.now
 )
+
+
+50000.times do
+  Book.create(
+    genre: Faker::Book.genre,
+    author: Faker::Name.name,
+    image: Faker::Internet.url,
+    title: Faker::Book.title,
+    editor: Faker::Book.publisher,
+    year: Faker::Date.between(100.years.ago, Time.zone.today).year
+  )
+end
