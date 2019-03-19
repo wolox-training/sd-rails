@@ -50,6 +50,8 @@ group :development, :test do
   gem 'dotenv-rails', '~> 2.7.1'
   # Fake data generator
   gem 'faker', '~> 1.9.3'
+  # Fixtures replacement
+  gem 'factory_bot', '~> 5.0.2'
 end
 
 group :development do
@@ -62,8 +64,6 @@ end
 group :test do
   # Ensures a clean state during tests
   gem 'database_cleaner', '~> 1.7.0'
-  # Fixtures replacement
-  gem 'factory_bot', '~> 5.0.2'
   # Testing suite
   gem 'rspec-rails', '~> 3.8.2'
   gem 'shoulda-matchers', '~> 4.0.1'
