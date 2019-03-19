@@ -1,32 +1,13 @@
-User.create(
-  email: 'test@wolox.com.ar',
-  password: '123123123',
-  password_confirmation: '123123123',
-  first_name: 'Test',
-  last_name: 'TestLastName'
-)
+Dir[Rails.root.join('spec', 'factories', '*.rb')].each { |file| require file }
 
-User.create(
-  email: 'test@wolox.com.es',
-  password: '123123123',
-  password_confirmation: '123123123',
-  first_name: 'Test',
-  last_name: 'TestLastName',
-  locale: 1
-)
+50000.times do
+  FactoryBot.create :book
+end
 
-Book.create(
-  genre: 'Horror',
-  author: 'some author',
-  image: 'some image',
-  title: 'some title',
-  editor: 'some editor',
-  year: '2019'
-)
+10.times do
+  FactoryBot.create :user
+end
 
-Rent.create(
-  user: User.last, 
-  book: Book.last, 
-  init_date: Time.now, 
-  return_date: Time.now
-)
+10.times do
+  FactoryBot.create :book_suggestion
+end

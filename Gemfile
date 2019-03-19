@@ -40,6 +40,8 @@ gem 'sidekiq-scheduler', '~> 3.0.0'
 gem 'pundit', '~> 2.0.1'
 # Http requests library
 gem 'httparty', '~> 0.16.4'
+# admin panel
+gem 'rails_admin', '~> 1.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -48,6 +50,10 @@ group :development, :test do
   gem 'rubocop', '~> 0.65.0', require: false
   # Env variables loader
   gem 'dotenv-rails', '~> 2.7.1'
+  # Fake data generator
+  gem 'faker', '~> 1.9.3'
+  # Fixtures replacement
+  gem 'factory_bot', '~> 5.0.2'
 end
 
 group :development do
@@ -60,10 +66,6 @@ end
 group :test do
   # Ensures a clean state during tests
   gem 'database_cleaner', '~> 1.7.0'
-  # Fixtures replacement
-  gem 'factory_bot', '~> 5.0.2'
-  # Fake data generator
-  gem 'faker', '~> 1.9.3'
   # Testing suite
   gem 'rspec-rails', '~> 3.8.2'
   gem 'shoulda-matchers', '~> 4.0.1'
