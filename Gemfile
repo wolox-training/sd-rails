@@ -40,6 +40,8 @@ gem 'sidekiq-scheduler', '~> 3.0.0'
 gem 'pundit', '~> 2.0.1'
 # Http requests library
 gem 'httparty', '~> 0.16.4'
+# admin panel
+gem 'rails_admin', '~> 1.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
