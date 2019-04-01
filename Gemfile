@@ -42,6 +42,8 @@ gem 'pundit', '~> 2.0.1'
 gem 'httparty', '~> 0.16.4'
 # admin panel
 gem 'rails_admin', '~> 1.3'
+# Fixtures replacement
+gem 'factory_bot', '~> 5.0.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -52,8 +54,6 @@ group :development, :test do
   gem 'dotenv-rails', '~> 2.7.1'
   # Fake data generator
   gem 'faker', '~> 1.9.3'
-  # Fixtures replacement
-  gem 'factory_bot', '~> 5.0.2'
 end
 
 group :development do
