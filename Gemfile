@@ -44,6 +44,8 @@ gem 'httparty', '~> 0.16.4'
 gem 'rails_admin', '~> 1.3'
 # Fixtures replacement
 gem 'factory_bot', '~> 5.0.2'
+# Fake data generator
+gem 'faker', '~> 1.9.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -52,8 +54,6 @@ group :development, :test do
   gem 'rubocop', '~> 0.65.0', require: false
   # Env variables loader
   gem 'dotenv-rails', '~> 2.7.1'
-  # Fake data generator
-  gem 'faker', '~> 1.9.3'
 end
 
 group :development do
