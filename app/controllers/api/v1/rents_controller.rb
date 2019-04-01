@@ -8,7 +8,7 @@ module Api
         rent = Rent.new(rent_params)
         authorize rent
         if rent.save!
-          Api::V1::RentsMailer.new_rent(rent.id).deliver_later
+          #Api::V1::RentsMailer.new_rent(rent.id).deliver_later
           render json: rent, status: :created
         else
           render json: { errors: rent.erros }, status: :precondition_failed
