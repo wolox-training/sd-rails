@@ -47,7 +47,7 @@ gem 'factory_bot', '~> 5.0.2'
 # Fake data generator
 gem 'faker', '~> 1.9.3'
 # Gemfile
-gem 'graphql'
+gem 'graphql', '1.8.13'
 
 gem 'search_object', '1.2.0'
 gem 'search_object_graphql', '0.1'

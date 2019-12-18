@@ -1,6 +1,7 @@
 module Types
   module Models
     class BookType < Types::Base::BaseObject
+      field :id, ID, null: false
       field :genre, String, null: false
       field :author, String, null: false
       field :image, String, null: false

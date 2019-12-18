@@ -3,7 +3,7 @@ module Queries
     extend ActiveSupport::Concern
     included do
       def all_books
-        Books.all
+        Book.all
       end
 
       def self.all_books_type
