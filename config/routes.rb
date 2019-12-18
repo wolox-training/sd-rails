@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  post "/graphql", to: "graphql#execute"
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   require 'sidekiq/web'
   mount Sidekiq::Web => '/sidekiq'

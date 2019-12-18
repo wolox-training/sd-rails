@@ -46,6 +46,11 @@ gem 'rails_admin', '~> 1.3'
 gem 'factory_bot', '~> 5.0.2'
 # Fake data generator
 gem 'faker', '~> 1.9.3'
+# Gemfile
+gem 'graphql'
+
+gem 'search_object', '1.2.0'
+gem 'search_object_graphql', '0.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
